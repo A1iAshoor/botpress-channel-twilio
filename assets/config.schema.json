@@ -1,0 +1,35 @@
+{
+  "description": "#TopLevel",
+  "type": "object",
+  "properties": {
+    "enabled": {
+      "description": "This this in the LOCAL config (unique to every bot/page)\nWhether or not the messenger module is enabled for this bot",
+      "default": false,
+      "type": "boolean"
+    },
+    "accountSID": {
+      "description": "This this in the LOCAL config (unique to every bot/page)\nThe Facebook Page Access Token",
+      "type": "string"
+    },
+    "authToken": {
+      "description": "This this in the GLOBAL config (same for all bots)\nYour app's \"App Secret\"\nFind this secret in your developers.facebook.com -> your app -> Settings -> Basic -> App Secret -> Show",
+      "type": "string"
+    },
+    "fromNumber": {
+      "description": "Set this in the GLOBAL config (same for all the bots)\nThe verify token, should be a random string unique to your server. This is a random (hard to guess) string of your choosing.\nDocs: https://developers.facebook.com/docs/messenger-platform/getting-started/webhook-setup/#verify_webhook",
+      "type": "string"
+    },
+    "$schema": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "accountSID",
+    "authToken",
+    "enabled",
+    "fromNumber"
+  ],
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
+
